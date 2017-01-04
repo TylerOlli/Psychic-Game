@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Psychic-Game</title>
+
+  <!-- Bootstrap File -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+  <!-- Javascript -->
+  <script src="assets/javascript/game.js"></script>
+
+   <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Jumbotron with Title -->
+    <div class="jumbotron">
+      <h1 class="text-center"><strong>Psychic-Game</strong></h1>
+      <h4 class="text-center">Made by Tyler Olli</h4>
+      <hr>
+      <center><h2>Guess What Letter I'm Thinking Of...</h2></center><br>
+      <div class="text-center">
+        <button class="btn btn-warning btn-xs themeButton"><span class="glyphicon glyphicon-music"></span> Play Song</button>       
+        <button class="btn btn-default btn-xs pauseButton"><span class="glyphicon glyphicon-pause"></span> Pause Song</button>  
+      </div>
+
+    </div>
+
+
+<div class="row">
+			<div class="col-md-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						Gemini The Psychic
+					</div>
+					<div class="panel-body">
+						<center><img src="assets/images/maxresdefault.jpg" alt="Psychic Woman" style="width: 400px;height:250px;"></center>
+					</div>
+				</div>
+			</div>
+    	
+    	
+
+
+
+	<div class="col-md-6">
+				<div id ="main" class="panel panel-primary">
+					<div class="panel-heading">
+						Play If You Dare!
+					</div>
+						<div class="panel-body">				
+							<div>
+	    					<h3>Wins: <span id="wins"></span></h3>
+	    					</div>
+
+	    					<div>
+	    					<h3>Losses: <span id="losses"></span></h3>
+	    					</div>
+
+							<div>
+	    					<h3>Guesses Left: <span id="guesses"></span></h3>
+	    					</div>
+
+	    					<div>
+	    					<h3>Your Guesses So Far: <span id="yourGuesses"></span></h3>
+	    					</div>
+
+						</div>
+					</div>
+	</div>
+
+  
+</div>
+
+</div>
+
+<script> 
+
+	  //jQuery
+
+      $(document).ready(function() {
+
+      // Gets Link for Theme Song
+      var audioElement = document.createElement("audio");
+      audioElement.setAttribute("src", "assets/audio/Sommarfagel.mp3");
+
+      // Theme Button
+      $(".themeButton").on("click", function() {
+        audioElement.play();
+      });
+
+      $(".pauseButton").on("click", function() {
+        audioElement.pause();
+      });
+
+ 
+	});
+  </script>
+
+</body>
+</html>
